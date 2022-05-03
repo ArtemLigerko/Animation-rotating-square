@@ -1,23 +1,23 @@
 body {
-    background-color: black;
+    /* background-color: black; */
 }
 
 main {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
-#square-body {
+.square-body {
     /* width: 400px; */
     min-width: 400px;
     height: 400px;
-    margin: 200px;
-    background-color: rgb(255, 255, 255);
+    margin: 20px 0 20px 20px;
+    background-color: rgb(204, 204, 204);
     display: flex;
     justify-content: center;
 }
 
-#square-animation {
+.square-animation {
     width: 150px;
     height: 150px;
     background-color: rgb(145, 165, 255);
@@ -32,4 +32,44 @@ main {
     /* from {transform: rotate(360deg);} */
     /* to {transform: rotate(0deg);} */
     100% {transform: rotate(-360deg);}
+}
+
+.columns-body {
+    min-width: 400px;
+    height: 400px;
+    margin: 20px 0 20px 20px;
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;   
+}
+
+.column-animation {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(115, 5, 129);
+    align-self: flex-end;
+    /* transition: ease-out; */
+}
+
+.column-animation2:hover {
+    animation: columns2 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes columns2 {
+    0% {width: 30px; height: 30px;}
+    100% {width: 30px; height: 150px;}
+}
+
+.column-animation3 {
+    animation: columns3 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes columns3 {
+    0% {width: 30px; height: 150px;}
+    100% {width: 30px; height: 30px;}
 }
