@@ -7,6 +7,8 @@ main {
     /* justify-content: center; */
 }
 
+/* --- Rotating square --- */
+
 .square-body {
     /* width: 400px; */
     min-width: 400px;
@@ -29,10 +31,10 @@ main {
 }
 
 @keyframes rotating-square {
-    /* from {transform: rotate(360deg);} */
-    /* to {transform: rotate(0deg);} */
     100% {transform: rotate(-360deg);}
 }
+
+/* --- Equalizer --- */
 
 .columns-body {
     min-width: 400px;
@@ -49,27 +51,12 @@ main {
     margin-bottom: 20px;
     background-color: rgb(115, 5, 129);
     align-self: flex-end;
-    /* transition: ease-out; */
+    transition: height 1s;
+    transition-timing-function: ease;
 }
 
-.column-animation2:hover {
-    animation: columns2 0.5s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes columns2 {
-    0% {width: 30px; height: 30px;}
-    100% {width: 30px; height: 150px;}
-}
-
-.column-animation3 {
-    animation: columns3 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes columns3 {
-    0% {width: 30px; height: 150px;}
-    100% {width: 30px; height: 30px;}
+.column-animation:hover {
+    height: 150px;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
